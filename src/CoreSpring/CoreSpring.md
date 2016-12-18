@@ -1,0 +1,27 @@
+## 第一章 Spring之旅(要点)
+### 简化Java开发
+#### 激发POJO的潜能
+- 非侵入式编程
+
+#### 依赖注入
+- 低耦合，高内聚
+1. 对象的依赖关系将由系统中负责协调个对象并在创建对象时候进行设定，对象本身无需创建/管理这种依赖关系。
+2. Spring通过Application Context进行依赖注入。
+
+#### 应用切面
+- 可复用
+1. AOP旨在促使系统服务组件分离。
+2. AOP中的系统服务被称为横切关注点(point-cut)。
+
+#### 使用模板消除样板式代码
+Spring通过模板封装来消除样板式代码。
+
+### 容纳你的Bean
+Spring自带多个容器进行实现，主要归为Bean Factory和Application Context两种类型。
+#### 使用ApplicationContext
+1. AnnotationConfigApplicationContext: 从一个或多个基于Java的配置类加载Spring应用上下文。
+2. AnnotationConfigWebApplicationContext:  从一个或多个基于Java的配置类加载Spring Web应用上下文。
+3. ClassPathXmlApplicationContext: 从类路径一个或多个XML配置文件加载上下文定义。
+4. FileSystemXmlApplicationContext: 从文件系统下的一个或多个XML配置文件加载上下文定义。
+5. XmlWebApplicationContext: 从Web应用下的一个或多个XML配置文件加载上下文定义。
+#### bean的生命周期
