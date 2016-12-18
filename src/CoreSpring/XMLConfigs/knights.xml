@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
     <!--注入Quest Bean-->
     <bean id="knight" class="CoreSpring.BraveKnight">
         <constructor-arg ref="quest"></constructor-arg>
@@ -10,4 +10,19 @@
     <bean id="quest" class="CoreSpring.SlayDragonQuest">
         <constructor-arg value="#(T(System).out"></constructor-arg>
     </bean>
+
+    <bean id="ministrel" class="CoreSpring.Ministrel">
+        <constructor-arg value="#(T(System).out"></constructor-arg>
+    </bean>
+
+    <aop:config>
+        <aop:aspect ref="ministrel">
+            <!--定义切入点-->
+            <aop:pointcut id="embark" expression="execution(* *.embarkOnQuest(..))"></aop:pointcut>
+            <!--声明前置通知-->
+            <aop:before pointcut-ref="embark" method="singBeforeQuest"></aop:before>
+            <!--声明后置通知-->
+            <aop:after pointcut-ref="embark" method="singAfterQuest"></aop:after>
+        </aop:aspect>
+    </aop:config>
 </beans>
