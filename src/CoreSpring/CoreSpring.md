@@ -25,3 +25,13 @@ Spring自带多个容器进行实现，主要归为Bean Factory和Application Co
 4. FileSystemXmlApplicationContext: 从文件系统下的一个或多个XML配置文件加载上下文定义。
 5. XmlWebApplicationContext: 从Web应用下的一个或多个XML配置文件加载上下文定义。
 #### bean的生命周期
+1. Spring对Bean实例化，
+2. Spring将值和Bean的引用注入到Bean对应的属性中，
+3. 如果实现BeanNameAware接口，Spring将Bean的ID传递给setBeanName()。
+4. 如果实现BeanFactoryAware接口，Spring调用setBeanFactory()把BeanFactory容器实例传入。
+5. 如果实现ApplicationContextAware接口，Spring调用setApplication()把bean的应用上下文传递过来。
+6. 如果实现BeanPostProcessor接口，Spring调用postProcessorBeforeInitialization()。
+7. 如果实现InitializingBean接口，Spring调用afterPropertiesSet()方法。
+8. 如果实现BeanPostProcessor接口，Spring调用postProcessorAfterInitialization()。
+9. Bean已经准备就绪可以使用，它会一直驻留在应用上下文中。
+10. 如果实现DisposableBean接口，Spring调用destroy()。
