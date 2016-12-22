@@ -1,3 +1,5 @@
+package CoreSpring;
+
 import CoreSpring.BraveKnight;
 import CoreSpring.Quest;
 import org.junit.Test;
