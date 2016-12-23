@@ -1,7 +1,5 @@
 package WiringBeans.SoundSystem;
 
-import org.apache.log4j.spi.LoggerFactory;
-import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,12 +16,14 @@ public class CDPlayerConfigTest {
     private CompactDisc cd;
     @Autowired
     private MediaPlayer player;
+
     @Test
-    public void cdShouldNotBeNull(){
+    public void cdShouldNotBeNull() {
         assert (cd != null);
     }
+
     @Test
-    public void play(){
+    public void play() {
         player.play();
     }
 }
