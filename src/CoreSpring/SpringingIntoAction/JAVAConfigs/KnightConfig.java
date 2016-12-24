@@ -1,9 +1,9 @@
-package CoreSpring.JAVAConfigs;
+package CoreSpring.SpringingIntoAction.JAVAConfigs;
 
-import CoreSpring.BraveKnight;
-import CoreSpring.Knight;
-import CoreSpring.Quest;
-import CoreSpring.SlayDragonQuest;
+import CoreSpring.SpringingIntoAction.BraveKnight;
+import CoreSpring.SpringingIntoAction.Knight;
+import CoreSpring.SpringingIntoAction.Quest;
+import CoreSpring.SpringingIntoAction.SlayDragonQuest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

@@ -1,4 +1,4 @@
-package CoreSpring;
+package CoreSpring.SpringingIntoAction;
 
 import java.io.PrintStream;
 

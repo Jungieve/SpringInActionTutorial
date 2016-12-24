@@ -1,7 +1,5 @@
-package CoreSpring;
+package CoreSpring.SpringingIntoAction;
 
-import CoreSpring.BraveKnight;
-import CoreSpring.Quest;
 import org.junit.Test;
 
 import static org.mockito.Mockito.mock;

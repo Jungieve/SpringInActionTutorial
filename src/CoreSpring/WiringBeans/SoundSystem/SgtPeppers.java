@@ -1,4 +1,4 @@
-package WiringBeans.SoundSystem;
+package CoreSpring.WiringBeans.SoundSystem;
 
 import org.springframework.stereotype.Component;
 

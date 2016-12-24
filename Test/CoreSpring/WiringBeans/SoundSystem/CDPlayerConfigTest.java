@@ -1,4 +1,4 @@
-package WiringBeans.SoundSystem;
+package CoreSpring.WiringBeans.SoundSystem;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

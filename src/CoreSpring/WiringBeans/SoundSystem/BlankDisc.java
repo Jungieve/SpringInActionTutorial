@@ -1,4 +1,4 @@
-package WiringBeans.SoundSystem;
+package CoreSpring.WiringBeans.SoundSystem;
 
 import java.util.List;
 

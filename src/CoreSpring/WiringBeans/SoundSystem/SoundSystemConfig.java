@@ -1,4 +1,4 @@
-package WiringBeans.SoundSystem;
+package CoreSpring.WiringBeans.SoundSystem;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -9,6 +9,6 @@ import org.springframework.context.annotation.ImportResource;
  */
 @Configuration
 @Import({CDPlayerConfig.class})
-@ImportResource("classpath:CDPlayerConfig.xml")
+@ImportResource("classpath:WiringBeans/CDPlayerConfig.xml")
 public class SoundSystemConfig {
 }
