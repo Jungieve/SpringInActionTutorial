@@ -1,6 +1,8 @@
 package CoreSpring.AspectOrientedSpring.Concert;
 
-import org.aspectj.lang.annotation.*;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
 
 /**
  * Created by congzihan on 16/12/30.
@@ -12,27 +14,15 @@ public class Audience {
     public void performance() {
     }
 
-    //表演之前
-    @Before("performance()")
-    public void silenceCellPhones() {
-        System.out.println("Silencing cell phones");
-    }
-
-    //表演之前
-    @Before("performance()")
-    public void takeSeats() {
-        System.out.println("Taking seats");
-    }
-
-    //表演之后
-    @AfterReturning("performance()")
-    public void applause() {
-        System.out.println("CLAP CLAP CLAP!!!");
-    }
-
-    //表演失败
-    @AfterThrowing("performance()")
-    public void demandRefund() {
-        System.out.println("Demanding a refund");
+    //创建环绕通知
+    public void watchPerformance(ProceedingJoinPoint joinPoint) {
+        try {
+            System.out.println("Silencing cell phones");
+            System.out.println("Taking seats");
+            joinPoint.proceed();
+            System.out.println("CLAP CLAP CLAP!!!");
+        } catch (Throwable throwable) {
+            System.out.println("Demanding a refund");
+        }
     }
 }
