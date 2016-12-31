@@ -5,4 +5,6 @@ package CoreSpring.WiringBeans.SoundSystem;
  */
 public interface CompactDisc {
     void play();
+
+    void playTrack(int trackNumber);
 }
